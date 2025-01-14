@@ -1,0 +1,136 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Item {
+  id                  String             @id @default(uuid())
+  qrCode              String             @unique
+  style               String
+  waist               Int
+  length              Int
+  shape               String
+  wash                String
+  fabric              String             @default("13")
+  status1             String             @default("CREATED")
+  status2             String             @default("PENDING")
+  location            String             @default("PENDING")
+  batchId             String?
+  orderId             String?
+  createdAt           DateTime           @default(now())
+  updatedAt           DateTime           @updatedAt
+  productionRequestId String?
+  binId               String?
+  batch               Batch?             @relation(fields: [batchId], references: [id])
+  Bin                 Bin?               @relation(fields: [binId], references: [id])
+  order               Order?             @relation(fields: [orderId], references: [id])
+  productionRequest   ProductionRequest? @relation(fields: [productionRequestId], references: [id])
+  scanEvents          ScanEvent[]
+}
+
+model Order {
+  id              String      @id @default(uuid())
+  customerId      String
+  targetStyle     String
+  targetWaist     Int
+  targetLength    Int
+  targetShape     String
+  targetWash      String
+  nameTag         String?
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+  buttonColor     String      @default("WHITE")
+  hemType         String      @default("ORL")
+  location        String      @default("PENDING")
+  status1         String      @default("CREATED")
+  status2         String      @default("PENDING")
+  items           Item[]
+  customer        Customer    @relation(fields: [customerId], references: [id])
+  waitlistEntries Waitlist[]
+}
+
+model Bin {
+  id           String   @id @default(uuid())
+  type         String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  name         String
+  status       String
+  currentCount Int      @default(0)
+  capacity     Int      @default(50)
+  zone         String   @default("ZONE1")
+  qrCode       String   @unique @default(uuid())
+  Item         Item[]
+}
+
+model ScanEvent {
+  id        String   @id @default(uuid())
+  itemId    String
+  type      String
+  success   Boolean
+  metadata  Json?
+  createdAt DateTime @default(now())
+  timestamp DateTime @default(now())
+  item      Item     @relation(fields: [itemId], references: [id], onDelete: Cascade)
+}
+
+model Customer {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  address   String?
+  phone     String?
+  orders    Order[]
+}
+
+model ProductionRequest {
+  id        String     @id @default(uuid())
+  style     String
+  waist     Int
+  length    Int
+  shape     String
+  wash      String
+  quantity  Int
+  status    String     @default("PENDING")
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  batch     Batch?     @relation("BatchToProductionRequest")
+  items     Item[]
+  waitlist  Waitlist[]
+}
+
+model Waitlist {
+  id                  String            @id @default(uuid())
+  productionRequestId String
+  orderId             String
+  position            Int?
+  createdAt           DateTime          @default(now())
+  updatedAt           DateTime          @updatedAt
+  order               Order             @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productionRequest   ProductionRequest @relation(fields: [productionRequestId], references: [id], onDelete: Cascade)
+}
+
+model PatternRequest {
+  id        String   @id @default(uuid())
+  sku       String
+  quantity  Int
+  status    String   @default("PENDING")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Batch {
+  id                  String             @id @default(uuid())
+  createdAt           DateTime           @default(now())
+  status              String             @default("IN_PROGRESS")
+  productionRequestId String?            @unique
+  updatedAt           DateTime           @updatedAt
+  productionRequest   ProductionRequest? @relation("BatchToProductionRequest", fields: [productionRequestId], references: [id])
+  items               Item[]
+}

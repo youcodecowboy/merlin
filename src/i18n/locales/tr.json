@@ -1,0 +1,234 @@
+{
+  "common": {
+    "management": "Yönetim",
+    "production": "Üretim",
+    "fulfillment": "Sipariş İşleme",
+    "settings": "Ayarlar",
+    "logout": "Çıkış",
+    "appName": "Sipariş Yönetim Sistemi",
+    "loading": "Yükleniyor...",
+    "noResults": "Sonuç bulunamadı",
+    "error": "Hata",
+    "search": "Ara",
+    "new": "Yeni",
+    "actions": "İşlemler",
+    "back": "Geri",
+    "cancel": "İptal",
+    "create": "Oluştur",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "view": "Görüntüle",
+    "success": "Başarılı",
+    "previous": "Önceki",
+    "next": "Sonraki"
+  },
+  "nav": {
+    "dashboard": "Gösterge Paneli",
+    "customers": "Müşteriler",
+    "orders": "Siparişler",
+    "items": "Ürünler",
+    "storage": "Depolama",
+    "findRequests": "Bulma İstekleri",
+    "patterns": "Kalıplar",
+    "activation": "Aktivasyon",
+    "wash": "Yıkama",
+    "qualityControl": "Kalite Kontrol",
+    "finishing": "Bitirme",
+    "packing": "Paketleme",
+    "shipping": "Sevkiyat",
+    "production": "Üretim"
+  },
+  "dashboard": {
+    "quickSearch": {
+      "title": "Hızlı Arama",
+      "placeholder": "Sipariş numarası, ürün ID veya anahtar kelime ile ara"
+    },
+    "productionStages": {
+      "unitsInStage": "aşamadaki birim",
+      "awaiting": "bekleyen"
+    }
+  },
+  "customers": {
+    "title": "Müşteriler",
+    "newCustomer": "Yeni Müşteri",
+    "searchPlaceholder": "Müşterilerde ara...",
+    "table": {
+      "customer": "Müşteri",
+      "phone": "Telefon",
+      "address": "Adres",
+      "created": "Oluşturulma",
+      "orders": "Siparişler",
+      "expand": "Genişlet",
+      "email": "E-posta"
+    },
+    "loading": "Müşteriler yükleniyor...",
+    "noCustomers": "Müşteri bulunamadı",
+    "error": {
+      "fetchFailed": "Müşteri Yüklenirken Hata",
+      "notFound": "Müşteri bulunamadı"
+    },
+    "details": {
+      "contactInfo": "İletişim Bilgileri",
+      "orderHistory": "Sipariş Geçmişi",
+      "activeOrders": "Aktif Siparişler",
+      "customerSince": "Müşteri olma tarihi",
+      "measurements": "Ölçüler"
+    }
+  },
+  "orders": {
+    "title": "Siparişler",
+    "newOrder": "Yeni Sipariş",
+    "searchPlaceholder": "Siparişlerde ara...",
+    "table": {
+      "customer": "Müşteri",
+      "orderId": "Sipariş No",
+      "sku": "Ürün Kodu",
+      "status": "Durum",
+      "stage": "Aşama",
+      "date": "Tarih",
+      "items": "Ürünler"
+    },
+    "loading": "Siparişler yükleniyor...",
+    "noOrders": "Sipariş bulunamadı",
+    "status": {
+      "all": "Tüm Durumlar",
+      "pending": "Beklemede",
+      "inProgress": "İşlemde",
+      "completed": "Tamamlandı",
+      "cancelled": "İptal Edildi"
+    }
+  },
+  "storage": {
+    "title": "Depolama",
+    "newBin": "Yeni Kutu",
+    "loading": "Depolama kutuları yükleniyor...",
+    "noBins": "Kutu bulunamadı",
+    "table": {
+      "binName": "KUTU ADI",
+      "capacity": "KAPASİTE",
+      "type": "TİP",
+      "actions": "İŞLEMLER",
+      "itemId": "ÜRÜN ID",
+      "sku": "ÜRÜN KODU",
+      "status1": "DURUM1",
+      "status2": "DURUM2"
+    },
+    "details": {
+      "title": "Kutu Detayları",
+      "zone": "Bölge",
+      "type": "Tip",
+      "capacity": "Kapasite",
+      "viewDetails": "Detayları Görüntüle",
+      "page": "Sayfa {current} / {total}"
+    },
+    "newBinDialog": {
+      "title": "Yeni Depolama Kutusu Oluştur",
+      "zone": "Bölge",
+      "capacity": "Kapasite",
+      "units": "Birim",
+      "preview": "Önizleme",
+      "binSku": "Kutu Kodu",
+      "locationAssignment": "Konum Atama",
+      "rack": "Raf",
+      "shelf": "Bölme",
+      "bin": "Kutu",
+      "noLocations": "Bu bölgede uygun konum bulunamadı",
+      "createBin": "Kutu Oluştur"
+    },
+    "messages": {
+      "createSuccess": "Depolama kutusu başarıyla oluşturuldu",
+      "createError": "Depolama kutusu oluşturulamadı. Lütfen tekrar deneyin.",
+      "deleteSuccess": "Depolama kutusu başarıyla silindi",
+      "deleteError": "Depolama kutusu silinemedi. Lütfen tekrar deneyin.",
+      "fetchError": "Depolama kutuları yüklenemedi. Lütfen tekrar deneyin."
+    }
+  },
+  "status": {
+    "pending": "Beklemede",
+    "inProgress": "İşlemde",
+    "completed": "Tamamlandı",
+    "warning": "Uyarı",
+    "success": "Başarılı",
+    "danger": "Tehlike"
+  },
+  "inventory": {
+    "title": "Envanter",
+    "searchPlaceholder": "Ürünlerde ara...",
+    "addItem": "Ürün Ekle",
+    "loading": "Ürünler yükleniyor...",
+    "noItems": "Ürün bulunamadı",
+    "error": {
+      "fetchFailed": "Ürünler yüklenemedi"
+    },
+    "table": {
+      "qrCode": "QR KOD",
+      "style": "STİL",
+      "waist": "BEL",
+      "shape": "KESİM",
+      "length": "BOY",
+      "wash": "YIKAMA",
+      "status1": "DURUM1",
+      "status2": "DURUM2",
+      "location": "KONUM"
+    },
+    "itemDetails": {
+      "title": "Ürün Detayları",
+      "loading": "Ürün detayları yükleniyor...",
+      "error": {
+        "notFound": "Ürün bulunamadı",
+        "fetchFailed": "Ürün detayları yüklenemedi"
+      },
+      "qrCode": {
+        "title": "QR Kodu",
+        "print": "QR Kodu Yazdır",
+        "move": "Birimi Taşı",
+        "activate": "Aktifleştir",
+        "defect": "Kusurlu İşaretle",
+        "lookup": "Sorgula",
+        "verify": "QR Kodu Doğrula"
+      },
+      "workflow": {
+        "title": "Mevcut İstek",
+        "completeProduction": "Üretimi Tamamla",
+        "completeProductionDesc": "Üretimi tamamlamak ve bu ürünü aktifleştirmek için QR kodunu tarayın",
+        "storeItem": "Ürünü Depola",
+        "binAssigned": "Kutu başarıyla atandı",
+        "systemConfirmed": "Sistem onayladı:",
+        "binCode": "Kutu Kodu",
+        "binName": "Konum",
+        "capacity": "Kapasite",
+        "available": "Müsait",
+        "scanToConfirm": "{{bin}} Kutusuna Taşı",
+        "awaitingBin": "Kutu Ataması Bekleniyor",
+        "assigningBin": "Sistem uygun bir depolama kutusu atıyor...",
+        "checking": "Sistem kontrol ediyor:",
+        "noRequest": "Aktif İstek Yok",
+        "noRequestDesc": "Bu ürün şu anda aktif bir iş akışının parçası değil.",
+        "moveToWash": "Yıkamaya Taşı",
+        "readyForWashing": "Bu ürün yıkama kutusuna taşınmaya hazır",
+        "moveToWashBin": "Yıkama Kutusuna Taşı"
+      },
+      "orderAssignment": {
+        "title": "Sipariş Ataması",
+        "customer": "Müşteri",
+        "orderDate": "Sipariş Tarihi",
+        "targetSku": "Hedef SKU",
+        "priority": "Öncelik",
+        "status": "Durum",
+        "hemType": "Paça Tipi",
+        "buttonColor": "Düğme Rengi",
+        "waitlistedDesc": "Bu ürün şu anda üretim için bekleme listesinde. Üretim tamamlandığında bir siparişe atanacak.",
+        "unassignedDesc": "Bu ürün şu anda herhangi bir siparişe atanmamış."
+      },
+      "scanHistory": {
+        "title": "Tarama Geçmişi",
+        "type": "Tür",
+        "timestamp": "Zaman",
+        "location": "Konum",
+        "status": "Durum",
+        "success": "Başarılı",
+        "failed": "Başarısız"
+      }
+    }
+  }
+} 

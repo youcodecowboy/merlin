@@ -1,0 +1,234 @@
+{
+  "common": {
+    "management": "Management",
+    "production": "Production",
+    "fulfillment": "Fulfillment",
+    "settings": "Settings",
+    "logout": "Logout",
+    "appName": "Order Management System",
+    "loading": "Loading...",
+    "noResults": "No results found",
+    "error": "Error",
+    "search": "Search",
+    "new": "New",
+    "actions": "Actions",
+    "back": "Back",
+    "cancel": "Cancel",
+    "create": "Create",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "success": "Success",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "customers": "Customers",
+    "orders": "Orders",
+    "items": "Items",
+    "storage": "Storage",
+    "findRequests": "Find Requests",
+    "patterns": "Patterns",
+    "activation": "Activation",
+    "wash": "Wash",
+    "qualityControl": "Quality Control",
+    "finishing": "Finishing",
+    "packing": "Packing",
+    "shipping": "Shipping",
+    "production": "Production"
+  },
+  "dashboard": {
+    "quickSearch": {
+      "title": "Quick Search",
+      "placeholder": "Search by order number, item ID, or keyword"
+    },
+    "productionStages": {
+      "unitsInStage": "units in stage",
+      "awaiting": "awaiting"
+    }
+  },
+  "customers": {
+    "title": "Customers",
+    "newCustomer": "New Customer",
+    "searchPlaceholder": "Search customers...",
+    "table": {
+      "customer": "Customer",
+      "phone": "Phone",
+      "address": "Address",
+      "created": "Created",
+      "orders": "Orders",
+      "expand": "Expand",
+      "email": "Email"
+    },
+    "loading": "Loading customers...",
+    "noCustomers": "No customers found",
+    "error": {
+      "fetchFailed": "Error Loading Customer",
+      "notFound": "Customer not found"
+    },
+    "details": {
+      "contactInfo": "Contact Information",
+      "orderHistory": "Order History",
+      "activeOrders": "Active Orders",
+      "customerSince": "Customer since",
+      "measurements": "Measurements"
+    }
+  },
+  "orders": {
+    "title": "Orders",
+    "newOrder": "New Order",
+    "searchPlaceholder": "Search orders...",
+    "table": {
+      "customer": "Customer",
+      "orderId": "Order ID",
+      "sku": "SKU",
+      "status": "Status",
+      "stage": "Stage",
+      "date": "Date",
+      "items": "Items"
+    },
+    "loading": "Loading orders...",
+    "noOrders": "No orders found",
+    "status": {
+      "all": "All Statuses",
+      "pending": "Pending",
+      "inProgress": "In Progress",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    }
+  },
+  "storage": {
+    "title": "Storage",
+    "newBin": "New Bin",
+    "loading": "Loading storage bins...",
+    "noBins": "No bins found",
+    "table": {
+      "binName": "BIN NAME",
+      "capacity": "CAPACITY",
+      "type": "TYPE",
+      "actions": "ACTIONS",
+      "itemId": "ITEM ID",
+      "sku": "SKU",
+      "status1": "STATUS1",
+      "status2": "STATUS2"
+    },
+    "details": {
+      "title": "Bin Details",
+      "zone": "Zone",
+      "type": "Type",
+      "capacity": "Capacity",
+      "viewDetails": "View Details",
+      "page": "Page {current} of {total}"
+    },
+    "newBinDialog": {
+      "title": "Create New Storage Bin",
+      "zone": "Zone",
+      "capacity": "Capacity",
+      "units": "Units",
+      "preview": "Preview",
+      "binSku": "Bin SKU",
+      "locationAssignment": "Location Assignment",
+      "rack": "Rack",
+      "shelf": "Shelf",
+      "bin": "Bin",
+      "noLocations": "No available locations in this zone",
+      "createBin": "Create Bin"
+    },
+    "messages": {
+      "createSuccess": "Storage bin created successfully",
+      "createError": "Failed to create storage bin. Please try again.",
+      "deleteSuccess": "Storage bin deleted successfully",
+      "deleteError": "Failed to delete storage bin. Please try again.",
+      "fetchError": "Failed to load storage bins. Please try again."
+    }
+  },
+  "status": {
+    "pending": "Pending",
+    "inProgress": "In Progress",
+    "completed": "Completed",
+    "warning": "Warning",
+    "success": "Success",
+    "danger": "Danger"
+  },
+  "inventory": {
+    "title": "Inventory",
+    "searchPlaceholder": "Search items...",
+    "addItem": "Add Item",
+    "loading": "Loading items...",
+    "noItems": "No items found",
+    "error": {
+      "fetchFailed": "Failed to fetch items"
+    },
+    "table": {
+      "qrCode": "QR CODE",
+      "style": "STYLE",
+      "waist": "WAIST",
+      "shape": "SHAPE",
+      "length": "LENGTH",
+      "wash": "WASH",
+      "status1": "STATUS1",
+      "status2": "STATUS2",
+      "location": "LOCATION"
+    },
+    "itemDetails": {
+      "title": "Item Details",
+      "loading": "Loading item details...",
+      "error": {
+        "notFound": "Item not found",
+        "fetchFailed": "Failed to fetch item details"
+      },
+      "qrCode": {
+        "title": "QR Code",
+        "print": "Print QR Code",
+        "move": "Move Unit",
+        "activate": "Activate",
+        "defect": "Mark Defect",
+        "lookup": "Lookup",
+        "verify": "Verify QR Code"
+      },
+      "workflow": {
+        "title": "Current Request",
+        "completeProduction": "Complete Production",
+        "completeProductionDesc": "Scan the QR code to complete production and activate this unit",
+        "storeItem": "Store Item",
+        "binAssigned": "Bin assigned successfully",
+        "systemConfirmed": "System has confirmed:",
+        "binCode": "Bin Code",
+        "binName": "Location",
+        "capacity": "Capacity",
+        "available": "Available",
+        "scanToConfirm": "Move to {{bin}} Bin",
+        "awaitingBin": "Awaiting Bin Assignment",
+        "assigningBin": "System is assigning an available storage bin...",
+        "checking": "System is checking:",
+        "noRequest": "No Active Request",
+        "noRequestDesc": "This item is currently not part of any active workflow.",
+        "moveToWash": "Move to Wash",
+        "readyForWashing": "This item is ready to be moved to the wash bin",
+        "moveToWashBin": "Move to Wash Bin"
+      },
+      "orderAssignment": {
+        "title": "Order Assignment",
+        "customer": "Customer",
+        "orderDate": "Order Date",
+        "targetSku": "Target SKU",
+        "priority": "Priority",
+        "status": "Status",
+        "hemType": "Hem Type",
+        "buttonColor": "Button Color",
+        "waitlistedDesc": "This item is currently waitlisted for production. It will be assigned to an order once production is complete.",
+        "unassignedDesc": "This item is not currently assigned to any order."
+      },
+      "scanHistory": {
+        "title": "Scan History",
+        "type": "Type",
+        "timestamp": "Timestamp",
+        "location": "Location",
+        "status": "Status",
+        "success": "Success",
+        "failed": "Failed"
+      }
+    }
+  }
+} 
